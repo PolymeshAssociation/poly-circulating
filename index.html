@@ -7,7 +7,7 @@
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-         document.getElementById("c").innerHTML = JSON.parse(xhttp.responseText).result/1000000000000000000;
+         document.getElementById("c").innerHTML = 1000000000 - JSON.parse(xhttp.responseText).result/1000000000000000000;
       }
   };
   xhttp.open("GET", url, true);
